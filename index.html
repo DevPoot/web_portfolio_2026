@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio profesional de David — Desarrollador & Creativo Digital." />
+  <title>David | Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header" id="site-header">
+    <nav class="nav">
+      <a href="#inicio" class="nav__logo">D<span class="accent">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#inicio" class="nav__link">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+        <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+        <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+        <li><a href="#escena-3d" class="nav__link">Escena 3D</a></li>
+        <li><a href="#contacto" class="nav__link">Contacto</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+          <span class="theme-toggle__icon theme-toggle__icon--sun">☀️</span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon">🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO / INICIO -->
+    <section class="hero" id="inicio">
+      <div class="hero__content">
+        <div class="hero__text">
+          <p class="hero__greeting">Hola, soy</p>
+          <h1 class="hero__name">David</h1>
+          <p class="hero__tagline">Desarrollador &amp; Creativo Digital</p>
+          <p class="hero__description">Creando experiencias digitales que combinan código, diseño y tecnología 3D.</p>
+          <div class="hero__cta">
+            <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+            <a href="#contacto" class="btn btn--outline">Contacto</a>
+          </div>
+        </div>
+        <div class="hero__avatar-wrapper">
+          <div class="hero__avatar-ring">
+            <img src="assets/avatar.jpg" alt="Foto de David" class="hero__avatar" loading="lazy" />
+          </div>
+        </div>
+      </div>
+      <div class="hero__shapes" aria-hidden="true">
+        <span class="shape shape--circle"></span>
+        <span class="shape shape--square"></span>
+        <span class="shape shape--triangle"></span>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <h2 class="section__title">Sobre mí</h2>
+        <div class="about__grid">
+          <div class="about__text">
+            <p>Soy estudiante de ingeniería con pasión por el desarrollo de software, el diseño 3D y la creación de experiencias interactivas. Me especializo en combinar tecnologías web modernas con herramientas creativas como Blender y Rive.</p>
+            <p>Actualmente curso el 5.° semestre en el Tecnológico de Monterrey, donde exploro la intersección entre programación, graficación y diseño de interfaces.</p>
+          </div>
+          <div class="about__stats">
+            <div class="stat-card"><span class="stat-card__number">5+</span><span class="stat-card__label">Proyectos</span></div>
+            <div class="stat-card"><span class="stat-card__number">3+</span><span class="stat-card__label">Tecnologías 3D</span></div>
+            <div class="stat-card"><span class="stat-card__number">∞</span><span class="stat-card__label">Curiosidad</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="section section--alt" id="habilidades">
+      <div class="container">
+        <h2 class="section__title">Habilidades</h2>
+        <div class="skills__grid">
+          <div class="skill-card"><div class="skill-card__icon">🖥️</div><h3>Desarrollo Web</h3><p>HTML, CSS, JavaScript, responsive design.</p></div>
+          <div class="skill-card"><div class="skill-card__icon">🎨</div><h3>Modelado 3D</h3><p>Blender, GLTF/GLB, Three.js, WebGL.</p></div>
+          <div class="skill-card"><div class="skill-card__icon">⚡</div><h3>Animación</h3><p>Rive, CSS animations, motion design.</p></div>
+          <div class="skill-card"><div class="skill-card__icon">🧠</div><h3>Programación</h3><p>C++, Python, JavaScript, algoritmos.</p></div>
+          <div class="skill-card"><div class="skill-card__icon">🎯</div><h3>UI / UX</h3><p>Diseño centrado en el usuario, prototipado.</p></div>
+          <div class="skill-card"><div class="skill-card__icon">🚀</div><h3>Herramientas</h3><p>Git, VS Code, Figma, terminal.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <h2 class="section__title">Proyectos</h2>
+        <div class="projects__grid">
+          <article class="project-card project-card--featured">
+            <div class="project-card__badge">Destacado</div>
+            <div class="project-card__preview"><span class="project-card__emoji">🎬</span></div>
+            <div class="project-card__body">
+              <h3>Proyecto de animación Rive</h3>
+              <p>Animación interactiva creada con Rive, explorando transiciones fluidas, estados y control desde JavaScript.</p>
+              <div class="project-card__tags"><span class="tag">Rive</span><span class="tag">JavaScript</span><span class="tag">Animación</span></div>
+              <a href="#" class="btn btn--primary btn--sm" id="btn-rive-project">Ver proyecto</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__preview"><span class="project-card__emoji">🌐</span></div>
+            <div class="project-card__body">
+              <h3>Portafolio 3D Interactivo</h3>
+              <p>Este sitio — portafolio web con escena 3D integrada mediante Three.js y modelos de Blender.</p>
+              <div class="project-card__tags"><span class="tag">Three.js</span><span class="tag">Blender</span><span class="tag">WebGL</span></div>
+              <a href="#escena-3d" class="btn btn--outline btn--sm">Ver escena</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__preview"><span class="project-card__emoji">🛠️</span></div>
+            <div class="project-card__body">
+              <h3>Próximo proyecto</h3>
+              <p>Un proyecto futuro en desarrollo. ¡Mantente al tanto!</p>
+              <div class="project-card__tags"><span class="tag">En progreso</span></div>
+              <a href="#" class="btn btn--outline btn--sm btn--disabled" aria-disabled="true">Próximamente</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCENA 3D -->
+    <section class="section section--alt" id="escena-3d">
+      <div class="container">
+        <h2 class="section__title">Escena 3D</h2>
+        <p class="section__subtitle">Mi setup de programador modelado en Blender</p>
+        <div id="canvas-3d" class="canvas-placeholder">
+          <div class="canvas-placeholder__content">
+            <span class="canvas-placeholder__icon">🧊</span>
+            <p class="canvas-placeholder__text">Próximamente</p>
+            <p class="canvas-placeholder__hint">Aquí se cargará la escena 3D interactiva con Three.js</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <h2 class="section__title">Contacto</h2>
+        <p class="section__subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+        <div class="contact__grid">
+          <a href="mailto:david@ejemplo.com" class="contact-link" id="contact-email"><span class="contact-link__icon">📧</span><span>david@ejemplo.com</span></a>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-github"><span class="contact-link__icon">💻</span><span>GitHub</span></a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-linkedin"><span class="contact-link__icon">🔗</span><span>LinkedIn</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 David. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
