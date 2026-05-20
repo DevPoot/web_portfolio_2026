@@ -78,4 +78,13 @@
 
   revealEls.forEach(el => observer.observe(el));
 
+  // ── 5. Spotify music player toggle ─────────────────────────
+  const musicBtn    = document.getElementById('music-toggle');
+  const spotifyPlayer = document.getElementById('spotify-player');
+
+  musicBtn.addEventListener('click', () => {
+    musicBtn.classList.toggle('active');
+    spotifyPlayer.classList.toggle('open');
+  });
+
 })();

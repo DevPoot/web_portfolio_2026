@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +8,11 @@
   <title>David | Portafolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
 
   <!-- NAV -->
@@ -29,12 +32,23 @@
           <span class="theme-toggle__icon theme-toggle__icon--sun">☀️</span>
           <span class="theme-toggle__icon theme-toggle__icon--moon">🌙</span>
         </button>
+        <button class="music-toggle" id="music-toggle" aria-label="Reproducir música">
+          🎵
+        </button>
         <button class="hamburger" id="hamburger" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
       </div>
     </nav>
   </header>
+
+  <!-- Spotify Player -->
+  <div class="spotify-player" id="spotify-player">
+    <iframe src="https://open.spotify.com/embed/playlist/670Vog5ELoTAW363HhFYtd?utm_source=generator&theme=0"
+      width="320" height="152" frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+      style="border-radius: 12px;"></iframe>
+  </div>
 
   <main>
     <!-- HERO / INICIO -->
@@ -52,7 +66,7 @@
         </div>
         <div class="hero__avatar-wrapper">
           <div class="hero__avatar-ring">
-            <img src="assets/avatar.jpg" alt="Foto de David" class="hero__avatar" loading="lazy" />
+            <img src="assets/foto_perfil.png" alt="Foto de David" class="hero__avatar" loading="lazy" />
           </div>
         </div>
       </div>
@@ -69,13 +83,20 @@
         <h2 class="section__title">Sobre mí</h2>
         <div class="about__grid">
           <div class="about__text">
-            <p>Soy estudiante de ingeniería con pasión por el desarrollo de software, el diseño 3D y la creación de experiencias interactivas. Me especializo en combinar tecnologías web modernas con herramientas creativas como Blender y Rive.</p>
-            <p>Actualmente curso el 5.° semestre en el Tecnológico de Monterrey, donde exploro la intersección entre programación, graficación y diseño de interfaces.</p>
+            <p>Soy estudiante de ingeniería con pasión por el desarrollo de software, el diseño 3D y la creación de
+              experiencias interactivas. Me especializo en combinar tecnologías web modernas con herramientas creativas
+              como Blender y Rive.</p>
+            <p>Actualmente curso el 5.° semestre en el Instituto Tecnológico de Mérida, donde exploro la intersección
+              entre
+              programación, graficación y diseño de interfaces.</p>
           </div>
           <div class="about__stats">
-            <div class="stat-card"><span class="stat-card__number">5+</span><span class="stat-card__label">Proyectos</span></div>
-            <div class="stat-card"><span class="stat-card__number">3+</span><span class="stat-card__label">Tecnologías 3D</span></div>
-            <div class="stat-card"><span class="stat-card__number">∞</span><span class="stat-card__label">Curiosidad</span></div>
+            <div class="stat-card"><span class="stat-card__number">5+</span><span
+                class="stat-card__label">Proyectos</span></div>
+            <div class="stat-card"><span class="stat-card__number">3+</span><span class="stat-card__label">Tecnologías
+                3D</span></div>
+            <div class="stat-card"><span class="stat-card__number">∞</span><span
+                class="stat-card__label">Curiosidad</span></div>
           </div>
         </div>
       </div>
@@ -86,12 +107,36 @@
       <div class="container">
         <h2 class="section__title">Habilidades</h2>
         <div class="skills__grid">
-          <div class="skill-card"><div class="skill-card__icon">🖥️</div><h3>Desarrollo Web</h3><p>HTML, CSS, JavaScript, responsive design.</p></div>
-          <div class="skill-card"><div class="skill-card__icon">🎨</div><h3>Modelado 3D</h3><p>Blender, GLTF/GLB, Three.js, WebGL.</p></div>
-          <div class="skill-card"><div class="skill-card__icon">⚡</div><h3>Animación</h3><p>Rive, CSS animations, motion design.</p></div>
-          <div class="skill-card"><div class="skill-card__icon">🧠</div><h3>Programación</h3><p>C++, Python, JavaScript, algoritmos.</p></div>
-          <div class="skill-card"><div class="skill-card__icon">🎯</div><h3>UI / UX</h3><p>Diseño centrado en el usuario, prototipado.</p></div>
-          <div class="skill-card"><div class="skill-card__icon">🚀</div><h3>Herramientas</h3><p>Git, VS Code, Figma, terminal.</p></div>
+          <div class="skill-card">
+            <div class="skill-card__icon">🖥️</div>
+            <h3>Desarrollo Web</h3>
+            <p>HTML, CSS, JavaScript, responsive design.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">🎨</div>
+            <h3>Modelado 3D</h3>
+            <p>Blender, GLTF/GLB, Three.js, WebGL.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">⚡</div>
+            <h3>Animación</h3>
+            <p>Rive, CSS animations, motion design.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">🧠</div>
+            <h3>Programación</h3>
+            <p>C++, Python, JavaScript, algoritmos.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">🎯</div>
+            <h3>UI / UX</h3>
+            <p>Diseño centrado en el usuario, prototipado.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">🚀</div>
+            <h3>Herramientas</h3>
+            <p>Git, VS Code, Figma, terminal.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -103,12 +148,18 @@
         <div class="projects__grid">
           <article class="project-card project-card--featured">
             <div class="project-card__badge">Destacado</div>
-            <div class="project-card__preview"><span class="project-card__emoji">🎬</span></div>
+            <div class="project-card__preview project-card__preview--gif">
+              <img src="assets/demo_login_with_rive_animation_5sa_26_1.gif" alt="Demo animación Rive"
+                class="project-card__gif" loading="lazy" />
+            </div>
             <div class="project-card__body">
               <h3>Proyecto de animación Rive</h3>
-              <p>Animación interactiva creada con Rive, explorando transiciones fluidas, estados y control desde JavaScript.</p>
-              <div class="project-card__tags"><span class="tag">Rive</span><span class="tag">JavaScript</span><span class="tag">Animación</span></div>
-              <a href="#" class="btn btn--primary btn--sm" id="btn-rive-project">Ver proyecto</a>
+              <p>Animación interactiva creada con Rive, explorando transiciones fluidas, estados y control desde
+                JavaScript.</p>
+              <div class="project-card__tags"><span class="tag">Rive</span><span class="tag">JavaScript</span><span
+                  class="tag">Animación</span></div>
+              <a href="https://devpoot.github.io/login_with_rive_animation_5sa_26_1/" target="_blank"
+                rel="noopener noreferrer" class="btn btn--primary btn--sm" id="btn-rive-project">Ver proyecto</a>
             </div>
           </article>
           <article class="project-card">
@@ -116,7 +167,8 @@
             <div class="project-card__body">
               <h3>Portafolio 3D Interactivo</h3>
               <p>Este sitio — portafolio web con escena 3D integrada mediante Three.js y modelos de Blender.</p>
-              <div class="project-card__tags"><span class="tag">Three.js</span><span class="tag">Blender</span><span class="tag">WebGL</span></div>
+              <div class="project-card__tags"><span class="tag">Three.js</span><span class="tag">Blender</span><span
+                  class="tag">WebGL</span></div>
               <a href="#escena-3d" class="btn btn--outline btn--sm">Ver escena</a>
             </div>
           </article>
@@ -154,9 +206,12 @@
         <h2 class="section__title">Contacto</h2>
         <p class="section__subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
         <div class="contact__grid">
-          <a href="mailto:david@ejemplo.com" class="contact-link" id="contact-email"><span class="contact-link__icon">📧</span><span>david@ejemplo.com</span></a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-github"><span class="contact-link__icon">💻</span><span>GitHub</span></a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-linkedin"><span class="contact-link__icon">🔗</span><span>LinkedIn</span></a>
+          <a href="mailto:dpoot04@gmail.com" class="contact-link" id="contact-email"><span
+              class="contact-link__icon">📧</span><span>dpoot04@gmail.com</span></a>
+          <a href="https://github.com/DevPoot" target="_blank" rel="noopener noreferrer" class="contact-link"
+            id="contact-github"><span class="contact-link__icon">💻</span><span>GitHub</span></a>
+          <a href="https://instagram.com/david__poot" target="_blank" rel="noopener noreferrer" class="contact-link"
+            id="contact-instagram"><span class="contact-link__icon">📸</span><span>@david__poot</span></a>
         </div>
       </div>
     </section>
@@ -168,4 +223,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
