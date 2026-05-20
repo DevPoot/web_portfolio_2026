@@ -18,7 +18,7 @@
   <!-- NAV -->
   <header class="site-header" id="site-header">
     <nav class="nav">
-      <a href="#inicio" class="nav__logo">D<span class="accent">.</span></a>
+      <a href="#inicio" class="nav__logo">DevPoot</a>
       <ul class="nav__links" id="nav-links">
         <li><a href="#inicio" class="nav__link">Inicio</a></li>
         <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
@@ -52,7 +52,7 @@
 
   <main>
     <!-- HERO / INICIO -->
-    <section class="hero" id="inicio">
+    <section class="hero page-section active" id="inicio">
       <div class="hero__content">
         <div class="hero__text">
           <p class="hero__greeting">Hola, soy</p>
@@ -78,7 +78,7 @@
     </section>
 
     <!-- SOBRE MÍ -->
-    <section class="section" id="sobre-mi">
+    <section class="section page-section" id="sobre-mi">
       <div class="container">
         <h2 class="section__title">Sobre mí</h2>
         <div class="about__grid">
@@ -103,7 +103,7 @@
     </section>
 
     <!-- HABILIDADES -->
-    <section class="section section--alt" id="habilidades">
+    <section class="section section--alt page-section" id="habilidades">
       <div class="container">
         <h2 class="section__title">Habilidades</h2>
         <div class="skills__grid">
@@ -142,7 +142,7 @@
     </section>
 
     <!-- PROYECTOS -->
-    <section class="section" id="proyectos">
+    <section class="section page-section" id="proyectos">
       <div class="container">
         <h2 class="section__title">Proyectos</h2>
         <div class="projects__grid">
@@ -158,7 +158,7 @@
                 JavaScript.</p>
               <div class="project-card__tags"><span class="tag">Rive</span><span class="tag">JavaScript</span><span
                   class="tag">Animación</span></div>
-              <a href="https://devpoot.github.io/login_with_rive_animation_5sa_26_1/" target="_blank"
+              <a href="https://login-with-rive-animation-2026.netlify.app/" target="_blank"
                 rel="noopener noreferrer" class="btn btn--primary btn--sm" id="btn-rive-project">Ver proyecto</a>
             </div>
           </article>
@@ -186,7 +186,7 @@
     </section>
 
     <!-- ESCENA 3D -->
-    <section class="section section--alt" id="escena-3d">
+    <section class="section section--alt page-section" id="escena-3d">
       <div class="container">
         <h2 class="section__title">Escena 3D</h2>
         <p class="section__subtitle">Mi setup de programador modelado en Blender</p>
@@ -201,17 +201,40 @@
     </section>
 
     <!-- CONTACTO -->
-    <section class="section" id="contacto">
+    <section class="section section--alt contact-section collapsed" id="contacto">
       <div class="container">
         <h2 class="section__title">Contacto</h2>
         <p class="section__subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
         <div class="contact__grid">
-          <a href="mailto:dpoot04@gmail.com" class="contact-link" id="contact-email"><span
-              class="contact-link__icon">📧</span><span>dpoot04@gmail.com</span></a>
-          <a href="https://github.com/DevPoot" target="_blank" rel="noopener noreferrer" class="contact-link"
-            id="contact-github"><span class="contact-link__icon">💻</span><span>GitHub</span></a>
-          <a href="https://instagram.com/david__poot" target="_blank" rel="noopener noreferrer" class="contact-link"
-            id="contact-instagram"><span class="contact-link__icon">📸</span><span>@david__poot</span></a>
+          <a href="mailto:dpoot04@gmail.com" class="contact-link contact-link--email" id="contact-email">
+            <span class="contact-link__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6.75C3 5.23122 4.23122 4 5.75 4H18.25C19.7688 4 21 5.23122 21 6.75V17.25C21 18.7688 19.7688 20 18.25 20H5.75C4.23122 20 3 18.7688 3 17.25V6.75Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.75 6.75L12 12.5L20.25 6.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="contact-link__text">dpoot04@gmail.com</span>
+          </a>
+          <a href="https://github.com/DevPoot" target="_blank" rel="noopener noreferrer" class="contact-link contact-link--github"
+            id="contact-github">
+            <span class="contact-link__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1C5.925 1 1 5.925 1 12C1 17.2 4.2875 21.4575 8.645 22.725C9.26 22.805 9.475 22.445 9.475 22.135C9.475 21.86 9.465 21.17 9.46 20.335C6.42 20.935 5.835 18.92 5.835 18.92C5.305 17.655 4.52 17.3 4.52 17.3C3.445 16.59 4.585 16.605 4.585 16.605C5.76 16.695 6.34 17.805 6.34 17.805C7.38 19.47 8.995 18.99 9.645 18.7C9.725 17.94 10.005 17.435 10.315 17.135C7.94 16.835 5.44 15.855 5.44 11.35C5.44 10.055 5.93 9.005 6.7 8.195C6.575 7.895 6.16 6.72 6.79 5.06C6.79 5.06 7.765 4.74 9.455 6.105C10.38 5.825 11.365 5.685 12.345 5.68C13.325 5.685 14.31 5.825 15.235 6.105C16.925 4.74 17.9 5.06 17.9 5.06C18.53 6.72 18.115 7.895 17.99 8.195C18.76 9.005 19.25 10.055 19.25 11.35C19.25 15.865 16.74 16.83 14.355 17.13C14.76 17.5 15.115 18.245 15.115 19.355C15.115 21.02 15.1 22.3 15.1 22.135C15.1 22.445 15.31 22.81 15.93 22.725C20.295 21.455 23.58 17.2 23.58 12C23.58 5.925 18.655 1 12 1Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="contact-link__text">GitHub</span>
+          </a>
+          <a href="https://instagram.com/david__poot" target="_blank" rel="noopener noreferrer" class="contact-link contact-link--instagram"
+            id="contact-instagram">
+            <span class="contact-link__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M16.75 7.75H16.76" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="contact-link__text">@david__poot</span>
+          </a>
         </div>
       </div>
     </section>
