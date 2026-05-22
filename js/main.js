@@ -105,7 +105,8 @@
 
   setActiveSection('inicio');
 
-  allLinks.forEach(link => {
+  // Handle nav links and buttons with hash navigation
+  const handleNavClick = (link) => {
     link.addEventListener('click', event => {
       const href = link.getAttribute('href');
       if (!href || !href.startsWith('#')) return;
@@ -121,12 +122,27 @@
       setActiveSection(targetId);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-  });
+  };
+
+  allLinks.forEach(handleNavClick);
+  
+  // Also handle .btn links with href anchors
+  document.querySelectorAll('.btn[href*="#"]').forEach(handleNavClick);
 
   // ── 7. Custom cursor + background motion effect ──────────────
   const customCursor = document.createElement('div');
   customCursor.id = 'custom-cursor';
   body.appendChild(customCursor);
+
+  let cursorHideTimer = null;
+
+  const showCursor = () => {
+    customCursor.classList.remove('cursor-hidden');
+    clearTimeout(cursorHideTimer);
+    cursorHideTimer = setTimeout(() => {
+      customCursor.classList.add('cursor-hidden');
+    }, 2000);
+  };
 
   const hoverTargets = [
     'a',
@@ -146,15 +162,24 @@
     customCursor.style.left = `${x}px`;
     customCursor.style.top = `${y}px`;
 
+    showCursor();
+
     const offsetX = 35 + (x / window.innerWidth) * 30;
     const offsetY = 20 + (y / window.innerHeight) * 25;
     document.documentElement.style.setProperty('--bg-offset-x', `${offsetX}%`);
     document.documentElement.style.setProperty('--bg-offset-y', `${offsetY}%`);
   });
 
-  document.addEventListener('mousedown', () => customCursor.classList.add('cursor-active'));
+  document.addEventListener('mousedown', () => {
+    customCursor.classList.add('cursor-active');
+    showCursor();
+  });
   document.addEventListener('mouseup', () => customCursor.classList.remove('cursor-active'));
-  document.addEventListener('mouseleave', () => customCursor.classList.remove('cursor-hover', 'cursor-active'));
+  document.addEventListener('mouseleave', () => {
+    customCursor.classList.remove('cursor-hover', 'cursor-active');
+    customCursor.classList.add('cursor-hidden');
+    clearTimeout(cursorHideTimer);
+  });
 
   document.querySelectorAll(hoverTargets).forEach(el => {
     el.addEventListener('mouseenter', () => customCursor.classList.add('cursor-hover'));
@@ -169,5 +194,10 @@
       customCursor.classList.remove('cursor-active');
     }
   });
+
+  // Start hidden — will appear on first mouse move
+  customCursor.classList.add('cursor-hidden');
+
+  // ── 8. 3D Scene — now handled by scene3d.js (ES module) ────
 
 })();
